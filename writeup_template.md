@@ -102,7 +102,7 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					|
 |:---------------------:|:---------------------------------------------:|
 | Input         		| 150x320x3 RGB image   							|
-| Cropping         		| 0-70, 125-150 Final resolution: 55x320x3  		|
+| Cropping         		| Crop vertically:0-70, 125-150, Output: 55x320x3  		|
 | Convolution 5x5     	| 2x2 stride, 	|
 | RELU					|												|
 | Drop out					|	Keep prob = 0.5			  						|
