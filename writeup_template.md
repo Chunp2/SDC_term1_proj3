@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
+[image2]: ./examples/center.jpg "Center"
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
@@ -102,21 +102,23 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					|
 |:---------------------:|:---------------------------------------------:|
 | Input         		| 150x320x3 RGB image   							|
-| Cropping         		| From Top to Top+70px, From Bottom to Bottom+25px 							|
-| Convolution 3x3     	| 1x1 stride, valid padding, outputs 28x28x6 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
-| Convolution 3x3	    | 1x1 stride, valid padding, outputs 10x10x16 	|
-| RELU					|												|
-| Max pooling	      	| 	2x2 stride,  outputs 5x5x16 			|
-| Fully connected		| outputs 400       									|
-| RELU					|												|
-| Fully connected		| outputs 200     									|
-| RELU					|												|
-| Fully connected		| outputs 84      									|
+| Cropping         		| 0-70, 125-150 Final resolution: 55x320x3  		|
+| Convolution 5x5     	| 2x2 stride, 	|
 | RELU					|												|
 | Drop out					|	Keep prob = 0.5			  						|
-| Fully connected		| outputs 43      									|
+| Convolution 5x5	    | 2x2 stride	|
+| RELU					|												|
+| Convolution 5x5	    | 2x2 stride 	|
+| RELU					|												|
+| Convolution 3x3	    | 1x1 stride 	|
+| RELU					|												|
+| Convolution 3x3	    | 1x1 stride 	|
+| RELU					|												|
+| Flatten					|												|
+| Dense		| outputs 100       									|
+| Dense		| outputs 50       									|
+| Dense		| outputs 10       									|
+| Dense		| outputs 1       									|
 
 
 #### 3. Creation of the Training Set & Training Process
