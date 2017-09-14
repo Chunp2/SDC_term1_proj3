@@ -22,8 +22,8 @@ The goals / steps of this project are the following:
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image6]: ./examples/before_flipped.png "Normal Image"
+[image7]: ./examples/flipped.png "Flipped Image"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -103,7 +103,7 @@ My final model consisted of the following layers:
 |:---------------------:|:---------------------------------------------:|
 | Input         		| 150x320x3 RGB image   							|
 | Cropping         		| Crop vertically:0-70, 125-150, Output: 55x320x3  		|
-| Convolution 5x5     	| 2x2 stride, 	|
+| Convolution 5x5     	| 2x2 stride 	|
 | RELU					|												|
 | Drop out					|	Keep prob = 0.5			  						|
 | Convolution 5x5	    | 2x2 stride	|
