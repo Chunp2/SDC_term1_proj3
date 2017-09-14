@@ -97,7 +97,27 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-![alt text][image1]
+My final model consisted of the following layers:
+
+| Layer         		|     Description	        					|
+|:---------------------:|:---------------------------------------------:|
+| Input         		| 150x320x3 RGB image   							|
+| Cropping         		| From Top to Top+70px, From Bottom to Bottom+25px 							|
+| Convolution 3x3     	| 1x1 stride, valid padding, outputs 28x28x6 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
+| Convolution 3x3	    | 1x1 stride, valid padding, outputs 10x10x16 	|
+| RELU					|												|
+| Max pooling	      	| 	2x2 stride,  outputs 5x5x16 			|
+| Fully connected		| outputs 400       									|
+| RELU					|												|
+| Fully connected		| outputs 200     									|
+| RELU					|												|
+| Fully connected		| outputs 84      									|
+| RELU					|												|
+| Drop out					|	Keep prob = 0.5			  						|
+| Fully connected		| outputs 43      									|
+
 
 #### 3. Creation of the Training Set & Training Process
 
