@@ -37,7 +37,7 @@ for image, measurement in zip(images, measurements):
 X_train = np.array(images)
 y_train = np.array(measurements)
 
-# Nvidia Neural Network Architecture
+# Neural Network Architecture
 from keras.models import Sequential, Model
 from keras.layers import Flatten, Dense, Lambda, Cropping2D, Dropout
 from keras.layers import Convolution2D
